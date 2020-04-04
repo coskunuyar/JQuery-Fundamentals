@@ -34,10 +34,55 @@
         </header>
         <div id="container">
             <div id="result"></div>
+            <ul id="users"></ul>
+            <h3>Add Post</h3>
+            <form id="postForm">
+                <input type="text" placeholder="Title" id="title" />
+                <hr>
+                <textarea placeholder="Body" id="body"></textarea>
+                <hr>
+                <input type="submit" value="Submit" />
+            </form>
         </div>
         <script>
             $(document).ready(() => {
+                // $('#result').load('test.html' , (responseTxt,statusTxt,xhr) => {
+                //     if(statusTxt === "success"){
+                //         alert('It went fine');
+                //     }else if(statusTxt === "error"){
+                //         alert('Error: ' + xhr.status);
+                //     }
+                // });
 
+                // $.get('test.html',data =>{
+                //     $('#result').html(data);
+                // });
+
+                // $.getJSON('user.json',data => {
+                //     $.each(data,(index,user) => {
+                //         $('ul#users').append('<li>'+ user.firstName +'</li>');
+                //     });
+                // });
+
+                // $.ajax({
+                //     method: 'GET',
+                //     url:"https://jsonplaceholder.typicode.com/posts",
+                //     dataType: 'json'
+                // }).done(data => {
+                //     $.map(data,(post,index)=>{
+                //         $('#result').append(`<h3>${post.title}</h3><p>${post.body}</p>`);
+                //     });
+                // });
+
+                // $('#postForm').submit( e => {
+                //     e.preventDefault();
+                //     let title = $('#title').val();
+                //     let body = $('#body').val();
+                //     let url = "https://jsonplaceholder.typicode.com/posts";
+                //     $.post(url,{title,body}).done(data => {
+                //         console.log('Post saved',data);
+                //     });
+                // });
             });
         </script>
     </body>
